@@ -19,14 +19,8 @@ def mergeList(leftList, rightList):
 	elif len(rightList) == 0:  
 		return leftList  
 	elif leftList[0] < rightList[0]:
-		# print("leftList = " + str(leftList))
-		# print("rightList = " + str(rightList))
-		# print("leftList : " + str(leftList[1:]))
 		return [leftList[0]] + mergeList(leftList[1:], rightList) 
-	else:  
-		# print("leftList = " + str(leftList))
-		# print("rightList = " + str(rightList))
-		# print("rightList : " + str(rightList[1:]))
+	else:
 		return [rightList[0]] + mergeList(rightList[1:], leftList)
 
 
